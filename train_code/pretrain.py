@@ -23,7 +23,7 @@ tf.disable_eager_execution()
 def arg_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument("--patch_size", default = 256, type = int)
-    parser.add_argument("--batch_size", default = 16, type = int)     
+    parser.add_argument("--batch_size", default = 16, type = int)
     parser.add_argument("--total_iter", default = 50000, type = int)
     parser.add_argument("--adv_train_lr", default = 2e-4, type = float)
     parser.add_argument("--gpu_fraction", default = 0.5, type = float)
@@ -79,7 +79,7 @@ def train(args):
                 photo_batch = utils.next_batch(face_photo_list, args.batch_size)
             else:
                 photo_batch = utils.next_batch(scenery_photo_list, args.batch_size)
-                
+
             _, r_loss = sess.run([optim, recon_loss], feed_dict={input_photo: photo_batch})
 
             if np.mod(total_iter+1, 50) == 0:

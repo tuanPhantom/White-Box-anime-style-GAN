@@ -3,8 +3,6 @@ Source code for CVPR 2020 paper
 'Learning to Cartoonize Using White-Box Cartoon Representations'
 by Xinrui Wang and Jinze yu
 '''
-
-
 from scipy.ndimage import filters
 from skimage import segmentation, color
 from joblib import Parallel, delayed
@@ -70,9 +68,9 @@ def label2rgb(label_field, image, kind='mix', bg_label=-1, bg_color=(0, 0, 0)):
 
 
 
-def color_ss_map(image, seg_num=200, power=1, 
+def color_ss_map(image, seg_num=200, power=1,
                  color_space='Lab', k=10, sim_strategy='CTSF'):
-    
+
     img_seg = segmentation.felzenszwalb(image, scale=k, sigma=0.8, min_size=100)
     img_cvtcolor = label2rgb(img_seg, image, kind='mix')
     img_cvtcolor = switch_color_space(img_cvtcolor, color_space)
@@ -81,20 +79,20 @@ def color_ss_map(image, seg_num=200, power=1,
     S.build_region_pairs()
 
     # Start hierarchical grouping
-    
+
     while S.num_regions() > seg_num:
-        
+
         i,j = S.get_highest_similarity()
         S.merge_region(i,j)
         S.remove_similarities(i,j)
         S.calculate_similarity_for_new_region()
-    
+
     image = label2rgb(S.img_seg, image, kind='mix')
     image = (image+1)/2
     image = image**power
     image = image/np.max(image)
     image = image*2 - 1
-    
+
     return image
 
 
@@ -107,13 +105,13 @@ def selective_adacolor(batch_image, seg_num=200, power=1):
 
 
 def simple_superpixel(batch_image, seg_num=200):
-    
+
     def process_slic(image):
         seg_label = segmentation.slic(image, n_segments=seg_num, sigma=1,
                                         compactness=10, convert2lab=True)
         image = color.label2rgb(seg_label, image, kind='mix')
         return image
-    
+
     num_job = np.shape(batch_image)[0]
     batch_out = Parallel(n_jobs=num_job)(delayed(process_slic)\
                          (image) for image in batch_image)
@@ -139,16 +137,15 @@ def next_batch(filename_list, batch_size):
         image = image.astype(np.float32)/127.5 - 1
         #image = image.astype(np.float32)/255.0
         batch_data.append(image)
-            
-    return np.asarray(batch_data)
 
+    return np.asarray(batch_data, dtype=object)
 
 
 def write_batch_image(image, save_dir, name, n):
-    
+
     if not os.path.exists(save_dir):
         os.makedirs(save_dir)
-    
+
     fused_dir = os.path.join(save_dir, name)
     fused_image = [0] * n
     for i in range(n):
@@ -167,4 +164,3 @@ def write_batch_image(image, save_dir, name, n):
 
 if __name__ == '__main__':
     pass
-    
