@@ -36,7 +36,8 @@
 
 - Assume you already have NVIDIA GPU and CUDA CuDNN installed 
 - Install tensorflow-gpu 
-- Install scikit-image
+- Install scikit-image==0.14.5, other versions may cause problems
+- Install numpy===1.23.1, other versions may cause problems
 
 
 ### Inference with Pre-trained Model
