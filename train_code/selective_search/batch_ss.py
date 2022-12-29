@@ -9,7 +9,7 @@ from adaptive_color import label2rgb
 from joblib import Parallel, delayed
 from skimage.segmentation import felzenszwalb
 from structure import HierarchicalGrouping
-from train_code.selective_search.util import switch_color_space
+from util import switch_color_space
 
 
 def color_ss_map(image, color_space='Lab', k=10, 
