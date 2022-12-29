@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/White-Box-anime-style-GAN-main.iml" filepath="$PROJECT_DIR$/.idea/White-Box-anime-style-GAN-main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/train-notebook-branch.iml" filepath="$PROJECT_DIR$/.idea/train-notebook-branch.iml" />
     </modules>
   </component>
 </project>

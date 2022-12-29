@@ -1,0 +1,4 @@
+vgg19_no_fc.npy
+*.jpg
+*.png
+*.jpeg
