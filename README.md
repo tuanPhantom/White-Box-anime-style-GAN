@@ -1,7 +1,7 @@
 # Apply an animated style to Images using GAN and White-box Representation
 
 - Tensorflow implementation for paper “Apply an animated style to Images using GAN and White-box Representation”.
-- All the documentation and paper is accessible from: https://drive.google.com/drive/folders/103JDFRrsvWfuUhWAL3VVULPS78AywfQK?usp=share_link
+- All documents and paper are accessible from: https://drive.google.com/drive/folders/103JDFRrsvWfuUhWAL3VVULPS78AywfQK?usp=share_link
 
 <img src="images/method.jpg" width="1000px"/>
 <img src="images/use_cases.jpg" width="1000px"/>
