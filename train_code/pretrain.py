@@ -9,7 +9,7 @@ by Xinrui Wang and Jinze yu
 import tensorflow._api.v2.compat.v1 as tf
 import tf_slim as slim
 
-from train_code import utils
+import utils
 import os
 import numpy as np
 import argparse
