@@ -116,7 +116,7 @@ def train(args):
     with tf.device('/device:GPU:0'):
 
         sess.run(tf.global_variables_initializer())
-        saver.restore(sess, tf.train.latest_checkpoint('pretrain/saved_models'))
+        saver.restore(sess, tf.train.latest_checkpoint('saved_models'))
 
         face_photo_dir = 'dataset/photo_face'
         face_photo_list = utils.load_image_list(face_photo_dir)
