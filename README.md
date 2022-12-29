@@ -63,7 +63,7 @@ https://drive.google.com/file/d/1s7rLnubm25IpZEGUwRmR75kbTCUo3GfI/view?usp=share
 
 - Dataset is accessible through the link:
   <br/>Raw:
-  https://drive.google.com/drive/folders/1BnYlMiXqjDfXPmnH3dC1aKBy0q9Ytfuu?usp=share_link
+  https://drive.google.com/drive/folders/1zQTHKRnUdz10WRz6u-RyepX0L7QUCC1v?usp=share_link
   <br/><strong>Processed</strong>:
   https://drive.google.com/drive/folders/1BnYlMiXqjDfXPmnH3dC1aKBy0q9Ytfuu?usp=share_link
 - Scenery images are collected from Shinkai Makoto, Miyazaki Hayao and Hosoda Mamoru films
