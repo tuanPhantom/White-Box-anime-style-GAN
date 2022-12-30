@@ -1,9 +1,3 @@
-'''
-Source code for CVPR 2020 paper
-'Learning to Cartoonize Using White-Box Cartoon Representations'
-by Xinrui Wang and Jinze yu
-'''
-
 import tensorflow._api.v2.compat.v1 as tf
 
 import utils

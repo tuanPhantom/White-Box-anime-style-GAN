@@ -41,14 +41,15 @@ def switch_color_space(img, target):
 
     elif target == 'rgI':
         img = img / np.sum(img, axis=0)
-        img[:,:,2] = rgb2gray(img)
+        img[:, :, 2] = rgb2gray(img)
         return img
 
     elif target == 'H':
-        return rgb2hsv(img)[:,:,0]
+        return rgb2hsv(img)[:, :, 0]
 
     else:
         raise "{} is not suported.".format(target)
+
 
 def load_strategy(mode):
     # TODO: Add mode sanity check
