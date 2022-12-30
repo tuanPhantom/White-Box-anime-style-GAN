@@ -1,9 +1,3 @@
-'''
-CVPR 2020 submission, Paper ID 6791
-Source code for 'Learning to Cartoonize Using White-Box Cartoon Representations'
-'''
-
-
 import layers
 import tensorflow._api.v2.compat.v1 as tf
 import numpy as np
